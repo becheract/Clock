@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Raleway:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet">
+    <!--link js-->
+    <script src="script.js"> </script>
+    <!--gsap anitmations-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js">
+    <!-- css -->
+    <style>
+
+        #title{
+            text-align: center;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        #Horloge {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            font-family: 'Open Sans Condensed', sans-serif;
+            font-size:200px;
+            border: red 2px solid;
+        }
+
+        #image{
+           margin: 20px;
+           padding: 20px;
+           position: absolute;
+           border: red 2px solid;
+           width: 400px;
+           height: auto;
+           top: 0; 
+        }
+
+
+    </style>
+    </head>
+<body onload="updateTime(); setInterval('updateTime()', 1000)">
+    <div class="clock">
+        <h1 id="title">Clock</h1>
+        <p id="Horloge"></p>
+    </div>
+
+    <div id="image"><img src="images/clock.jpg"></div>
+
+    <canvas id="circle" width="100%" height="auto"></canvas>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"> </script>
+<script>
+gsap.from("#image", {opacity: 0, y: 100, duration: 1});
+
+gsap.from("#Horloge", {opacity: 0, y: 100, duration: 1});
+</script>
+</html>
