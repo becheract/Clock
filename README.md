@@ -1,1 +1,2 @@
-# Clcreating a clock with javascript and using GSAP animations.
+# Clock 
+creating a clock with javascript and using GSAP animations.
